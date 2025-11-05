@@ -1,4 +1,5 @@
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
+import 'bootstrap-icons/font/bootstrap-icons.css'
 import './scss/style.scss'
 
 
@@ -21,3 +22,22 @@ import './scss/style.scss'
     }, false)
   })
 })()
+
+document.addEventListener("DOMContentLoaded", () => {
+  const currentPath = window.location.pathname;
+
+  document.querySelectorAll(".nav-item").forEach(link => {
+    const href = link.getAttribute("href");
+    if (!href || href === "#") return;
+
+    if (
+      currentPath === href ||
+      currentPath === href.replace("/index.html", "/")
+    ) {
+      link.classList.add("active");
+    } else {
+      link.classList.remove("active");
+    }
+  });
+});
+
