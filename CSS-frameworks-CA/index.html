@@ -4,10 +4,97 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>css-frameworks-ca</title>
+    <title>Login | Social Media App</title>
+    
   </head>
+
   <body>
-    <div id="app"></div>
+ <main class="container py-5">
+  <div class="row justify-content-center align-items-start g-4">
+    <!-- LOGIN FORM -->
+    <div class="col-12 col-lg-6 d-flex justify-content-center">
+      <section class="auth-card card shadow-sm p-4 w-100 mx-3">
+        <h1 class="fw-bold text-center mb-4">Login</h1>
+
+        <form class="g-3 needs-validation" action="/profile/index.html" method="POST" novalidate>
+          <div class="mb-3">
+            <label for="loginUsername" class="form-label">Username</label>
+            <div class="input-group has-validation">
+              <span class="input-group-text">@</span>
+              <input type="text" class="form-control" id="loginUsername" required placeholder="Enter your username"/>
+              <div class="invalid-feedback">Please type in your username.</div>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="loginPassword" class="form-label">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              id="loginPassword"
+              minlength="8"
+              required
+              placeholder="Enter your password"
+            />
+            <div class="invalid-feedback">Wrong Password</div>
+          </div>
+
+          <button class="btn btn-primary w-100 mt-auto" type="submit">Login</button>
+        </form>
+      </section>
+    </div>
+
+    <!-- REGISTER FORM -->
+    <div class="col-12 col-lg-6 d-flex justify-content-center">
+      <section class="auth-card register card shadow-sm p-4 w-100 mx-3">
+        <h1 class="fw-bold text-center mb-4">Register</h1>
+
+        <form class="g-3 needs-validation" action="/profile/index.html" method="POST" novalidate>
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="firstName" class="form-label">First name</label>
+              <input type="text" class="form-control" id="firstName" required placeholder="Enter your first name"/>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="lastName" class="form-label">Last name</label>
+              <input type="text" class="form-control" id="lastName" required placeholder="Enter your last name"/>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="registerUsername" class="form-label">Username</label>
+            <div class="input-group has-validation">
+              <span class="input-group-text">@</span>
+              <input type="text" class="form-control" id="registerUsername" required placeholder="Username" />
+              <div class="invalid-feedback">Please choose a username.</div>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="registerPassword" class="form-label">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              id="registerPassword"
+              minlength="8"
+              required
+              placeholder="Enter your password"
+            />
+            <div class="invalid-feedback">Password must be at least 8 characters long.</div>
+          </div>
+
+          <div class="form-check mb-3">
+            <input class="form-check-input" type="checkbox" id="termsCheck" required />
+            <label class="form-check-label" for="termsCheck">Agree to terms and conditions</label>
+          </div>
+
+          <button class="btn btn-primary w-100 mt-auto" type="submit">Register</button>
+        </form>
+      </section>
+    </div>
+  </div>
+</main>
+
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
