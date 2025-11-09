@@ -17,47 +17,153 @@ $break-md: 768px;
   }
 }
 
+
 .feed-grid {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 3rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
   margin-top: 1.7rem;
+  align-items: center;
+  justify-content: center;
 
   .feed-card {
-    max-width: 400px;
     width: 100%;
-    overflow: hidden;
-    display: flex;
+    max-width: 400px;
     background-color: $light-pink;
-    
+    overflow: hidden;
+    box-shadow: $shadow;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    transition: all 0.3s ease;
+
+    &:hover {
+      box-shadow: $shadow-hover;
+      transform: translateY(-3px);
+    }
+
+    .feed-img {
+      width: 100%;
+      height: 450px;
+      object-fit: cover;
+      display: block;
+      margin: 0;
+      padding: 0;
+      border: none;
+    }
+
+    @media (max-width: 768px) {
+        max-width: 350px;
 
         .feed-img {
-          width: 100%;
-          height: 450px;
-          object-fit: cover;
-          
+            height: 300px;
+        }
+    }
+
+    @media (max-width: 576px) {
+        max-width: 300px;
+
+        .feed-img {
+            height: 250px;
+        }
+    }
+
+    @media (max-width: 400px) {
+        max-width: 280px;
+
+        .feed-img {
+            height: 250px;
+        }
+    }
+
+    .post-actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.8rem 1rem 0.4rem;
+      color: $pink;
+      font-size: 1.3rem;
+      font-weight: 600;
+      user-select: none;
+
+      .left-icons {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      i {
+        cursor: pointer;
+        transition: all 0.2s ease;
+
+        &:hover {
+          color: darken($pink, 10%);
+          transform: scale(1.1);
         }
 
-        .card-body {
+        &:last-child {
+          margin-left: auto;
+        }
+      }
+    }
+
+    .card-body {
       text-align: left;
       padding: 1rem;
-      
-
-      .card-title {
-        color: $pink;
-        font-weight: 600;
-        font-size: 1.1rem;
-      }
 
       .card-text {
-        font-size: 0.8rem;
+        display: flex;
+        align-items: baseline;
+        flex-wrap: wrap;
+        gap: 0.3rem;
+        margin-bottom: 0.5rem;
+        font-size: 1rem;
+        color: $gray;
+
+        .card-title {
+          color: $pink;
+          font-weight: 600;
+          margin: 0;
+          display: inline;
+        }
+      }
+
+      .text-body-secondary {
+        font-size: 0.75rem;
         color: $gray;
       }
     }
-    .text-body-secondary {
-        font-size: 0.7rem;
-        color: $gray;
-    }
   }
+}
+
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.4rem 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+
+    .user-info {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+    }
+
+    .username {
+        
+        color: $pink;
+        font-weight: 600;
+        font-size: large;
+    }   
+}
+
+.post-time {
+    display: flex;
+    color: $pink;
+    font-size: 0.875rem;
+    padding-bottom: 0.2rem;
+    
+    
 }
