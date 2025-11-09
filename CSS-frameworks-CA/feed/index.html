@@ -30,10 +30,12 @@
   </a>
 </nav>
 
-<main class="container feed-page mb-3">
+<main class="container feed-page mb-3 position-relative">
+<button class="btn logout-btn">Log out</button>
+
   <h1 class="text-center mb-4">Feed</h1>
   <section class="feed-grid">
-   <div class="row g-0 align-items-center mb-4">
+   <div class="options-bar row g-0 align-items-center mb-4">
   <label for="select" class="form-label">Choose an option</label>
   <select class="form-select" id="select">
     <option>Sort by</option>
@@ -41,14 +43,53 @@
     <option>Oldest Posts</option>
   </select>
 </div>
+
+<div class="search-bar mb-4">
+    <input type="text" class="form-control mb-4" placeholder="Search in feed...">
+  </div>
   </section>
+
+ <!-- CREATE POST SECTION -->
+<section class="create-post">
+  <h2 class="create-post-title text-center mb-4">Create a new post</h2>
+
+  <form class="create-post-form w-100">
+    <div class="mb-3">
+      <label for="postCaption" class="form-label">Caption</label>
+      <input
+        type="text"
+        id="postCaption"
+        class="form-control"
+        placeholder="What's on your mind?"
+        required
+      >
+    </div>
+
+    <div class="mb-3">
+      <label for="postImage" class="form-label">Image URL</label>
+      <input
+        type="url"
+        id="postImage"
+        class="form-control"
+        placeholder="Paste image link here..."
+        required
+      >
+    </div>
+
+    <button type="submit" class="btn create-post-btn w-100 w-md-auto">
+      Post
+    </button>
+  </form>
+</section>
+
+  
    <hr class="divider">
 
    <section class="feed-grid">
   <div class="feed-card card mb-4">
     <div class="post-header">
       <div class="user-info">
-      <span class="username">John Doe</span>
+      <span class="username">Alice Moore</span>
       <span class="post-time">• 1h</span>
 </div>
       <i class="bi bi-three-dots-vertical"></i>
@@ -69,97 +110,284 @@
 
       <div class="card-body">
         <div class="card-text">
-        <span class="card-title">John Doe</span> Pretty Flowers!
+        <span class="card-title">Alice Moore</span> Pretty Flowers!
+        </div>
+        <p class="card-time-update"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+
+     <div class="feed-card card mb-4">
+    <div class="post-header">
+      <div class="user-info">
+      <span class="username">Alice Moore</span>
+      <span class="post-time">• 1h</span>
+</div>
+      <i class="bi bi-three-dots-vertical"></i>
+    </div>
+    
+      <img src="https://images.unsplash.com/photo-1699883905775-80a35ce65ace?auto=format&fit=crop&q=80&w=985" class="feed-img" alt="Post Image">
+
+
+      <div class="post-actions">
+        <div class="left-icons">
+      <i class="bi bi-heart"></i>
+      <i class="bi bi-chat"></i>
+      <i class="bi bi-send"></i>
+      </div>
+      <i class="bi bi-bookmark right-icon"></i>
+
+    </div>
+
+      <div class="card-body">
+        <div class="card-text">
+        <span class="card-title">Alice Moore</span> Pretty Flowers!
+        </div>
+        <p class="card-time-update"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+
+     <div class="feed-card card mb-4">
+    <div class="post-header">
+      <div class="user-info">
+      <span class="username">Alice Moore</span>
+      <span class="post-time">• 1h</span>
+</div>
+      <i class="bi bi-three-dots-vertical"></i>
+    </div>
+    
+      <img src="https://images.unsplash.com/photo-1699883905775-80a35ce65ace?auto=format&fit=crop&q=80&w=985" class="feed-img" alt="Post Image">
+
+
+      <div class="post-actions">
+        <div class="left-icons">
+      <i class="bi bi-heart"></i>
+      <i class="bi bi-chat"></i>
+      <i class="bi bi-send"></i>
+      </div>
+      <i class="bi bi-bookmark right-icon"></i>
+
+    </div>
+
+      <div class="card-body">
+        <div class="card-text">
+        <span class="card-title">Alice Moore</span> Pretty Flowers!
+        </div>
+        <p class="card-time-update"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+
+     <div class="feed-card card mb-4">
+    <div class="post-header">
+      <div class="user-info">
+      <span class="username">Alice Moore</span>
+      <span class="post-time">• 1h</span>
+</div>
+      <i class="bi bi-three-dots-vertical"></i>
+    </div>
+    
+      <img src="https://images.unsplash.com/photo-1699883905775-80a35ce65ace?auto=format&fit=crop&q=80&w=985" class="feed-img" alt="Post Image">
+
+
+      <div class="post-actions">
+        <div class="left-icons">
+      <i class="bi bi-heart"></i>
+      <i class="bi bi-chat"></i>
+      <i class="bi bi-send"></i>
+      </div>
+      <i class="bi bi-bookmark right-icon"></i>
+
+    </div>
+
+      <div class="card-body">
+        <div class="card-text">
+        <span class="card-title">Alice Moore</span> Pretty Flowers!
+        </div>
+        <p class="card-time-update"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+
+     <div class="feed-card card mb-4">
+    <div class="post-header">
+      <div class="user-info">
+      <span class="username">Alice Moore</span>
+      <span class="post-time">• 1h</span>
+</div>
+      <i class="bi bi-three-dots-vertical"></i>
+    </div>
+    
+      <img src="https://images.unsplash.com/photo-1699883905775-80a35ce65ace?auto=format&fit=crop&q=80&w=985" class="feed-img" alt="Post Image">
+
+
+      <div class="post-actions">
+        <div class="left-icons">
+      <i class="bi bi-heart"></i>
+      <i class="bi bi-chat"></i>
+      <i class="bi bi-send"></i>
+      </div>
+      <i class="bi bi-bookmark right-icon"></i>
+
+    </div>
+
+      <div class="card-body">
+        <div class="card-text">
+        <span class="card-title">Alice Moore</span> Pretty Flowers!
+        </div>
+        <p class="card-time-update"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+
+     <div class="feed-card card mb-4">
+    <div class="post-header">
+      <div class="user-info">
+      <span class="username">Alice Moore</span>
+      <span class="post-time">• 1h</span>
+</div>
+      <i class="bi bi-three-dots-vertical"></i>
+    </div>
+    
+      <img src="https://images.unsplash.com/photo-1699883905775-80a35ce65ace?auto=format&fit=crop&q=80&w=985" class="feed-img" alt="Post Image">
+
+
+      <div class="post-actions">
+        <div class="left-icons">
+      <i class="bi bi-heart"></i>
+      <i class="bi bi-chat"></i>
+      <i class="bi bi-send"></i>
+      </div>
+      <i class="bi bi-bookmark right-icon"></i>
+
+    </div>
+
+      <div class="card-body">
+        <div class="card-text">
+        <span class="card-title">Alice Moore</span> Pretty Flowers!
+        </div>
+        <p class="card-time-update"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+
+     <div class="feed-card card mb-4">
+    <div class="post-header">
+      <div class="user-info">
+      <span class="username">Alice Moore</span>
+      <span class="post-time">• 1h</span>
+</div>
+      <i class="bi bi-three-dots-vertical"></i>
+    </div>
+    
+      <img src="https://images.unsplash.com/photo-1699883905775-80a35ce65ace?auto=format&fit=crop&q=80&w=985" class="feed-img" alt="Post Image">
+
+
+      <div class="post-actions">
+        <div class="left-icons">
+      <i class="bi bi-heart"></i>
+      <i class="bi bi-chat"></i>
+      <i class="bi bi-send"></i>
+      </div>
+      <i class="bi bi-bookmark right-icon"></i>
+
+    </div>
+
+      <div class="card-body">
+        <div class="card-text">
+        <span class="card-title">Alice Moore</span> Pretty Flowers!
+        </div>
+        <p class="card-time-update"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+
+     <div class="feed-card card mb-4">
+    <div class="post-header">
+      <div class="user-info">
+      <span class="username">Alice Moore</span>
+      <span class="post-time">• 1h</span>
+</div>
+      <i class="bi bi-three-dots-vertical"></i>
+    </div>
+    
+      <img src="https://images.unsplash.com/photo-1699883905775-80a35ce65ace?auto=format&fit=crop&q=80&w=985" class="feed-img" alt="Post Image">
+
+
+      <div class="post-actions">
+        <div class="left-icons">
+      <i class="bi bi-heart"></i>
+      <i class="bi bi-chat"></i>
+      <i class="bi bi-send"></i>
+      </div>
+      <i class="bi bi-bookmark right-icon"></i>
+
+    </div>
+
+      <div class="card-body">
+        <div class="card-text">
+        <span class="card-title">Alice Moore</span> Pretty Flowers!
+        </div>
+        <p class="card-time-update"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+
+     <div class="feed-card card mb-4">
+    <div class="post-header">
+      <div class="user-info">
+      <span class="username">Alice Moore</span>
+      <span class="post-time">• 1h</span>
+</div>
+      <i class="bi bi-three-dots-vertical"></i>
+    </div>
+    
+      <img src="https://images.unsplash.com/photo-1699883905775-80a35ce65ace?auto=format&fit=crop&q=80&w=985" class="feed-img" alt="Post Image">
+
+
+      <div class="post-actions">
+        <div class="left-icons">
+      <i class="bi bi-heart"></i>
+      <i class="bi bi-chat"></i>
+      <i class="bi bi-send"></i>
+      </div>
+      <i class="bi bi-bookmark right-icon"></i>
+
+    </div>
+
+      <div class="card-body">
+        <div class="card-text">
+        <span class="card-title">Alice Moore</span> Pretty Flowers!
+        </div>
+        <p class="card-time-update"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+
+     <div class="feed-card card mb-4">
+    <div class="post-header">
+      <div class="user-info">
+      <span class="username">Alice Moore</span>
+      <span class="post-time">• 1h</span>
+</div>
+      <i class="bi bi-three-dots-vertical"></i>
+    </div>
+    
+      <img src="https://images.unsplash.com/photo-1699883905775-80a35ce65ace?auto=format&fit=crop&q=80&w=985" class="feed-img" alt="Post Image">
+
+
+      <div class="post-actions">
+        <div class="left-icons">
+      <i class="bi bi-heart"></i>
+      <i class="bi bi-chat"></i>
+      <i class="bi bi-send"></i>
+      </div>
+      <i class="bi bi-bookmark right-icon"></i>
+
+    </div>
+
+      <div class="card-body">
+        <div class="card-text">
+        <span class="card-title">Alice Moore</span> Pretty Flowers!
         </div>
         <p class="card-time-update"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
       </div>
     </div>
 
 
- <div class="feed-grid">
-  <div class="feed-card card mb-4">
-      <img src="https://images.unsplash.com/photo-1699883905775-80a35ce65ace?auto=format&fit=crop&q=80&w=985" class="feed-img" alt="Post Image">
-      <div class="card-body">
-        <h5 class="card-title">John Doe</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-      </div>
-    </div>
-</div>
-
- <div class="feed-grid">
-  <div class="feed-card card mb-4">
-      <img src="https://images.unsplash.com/photo-1699883905775-80a35ce65ace?auto=format&fit=crop&q=80&w=985" class="feed-img" alt="Post Image">
-      <div class="card-body">
-        <h5 class="card-title">John Doe</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-      </div>
-    </div>
-</div>
-
- <div class="feed-grid">
-  <div class="feed-card card mb-4">
-      <img src="https://images.unsplash.com/photo-1699883905775-80a35ce65ace?auto=format&fit=crop&q=80&w=985" class="feed-img" alt="Post Image">
-      <div class="card-body">
-        <h5 class="card-title">John Doe</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-      </div>
-    </div>
-</div>
-
- <div class="feed-grid">
-  <div class="feed-card card mb-4">
-      <img src="https://images.unsplash.com/photo-1699883905775-80a35ce65ace?auto=format&fit=crop&q=80&w=985" class="feed-img" alt="Post Image">
-      <div class="card-body">
-        <h5 class="card-title">John Doe</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-      </div>
-    </div>
-</div>
-
- <div class="feed-grid">
-  <div class="feed-card card mb-4">
-      <img src="https://images.unsplash.com/photo-1699883905775-80a35ce65ace?auto=format&fit=crop&q=80&w=985" class="feed-img" alt="Post Image">
-      <div class="card-body">
-        <h5 class="card-title">John Doe</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-      </div>
-    </div>
-</div>
-
- <div class="feed-grid">
-  <div class="feed-card card mb-4">
-      <img src="https://images.unsplash.com/photo-1699883905775-80a35ce65ace?auto=format&fit=crop&q=80&w=985" class="feed-img" alt="Post Image">
-      <div class="card-body">
-        <h5 class="card-title">John Doe</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-      </div>
-    </div>
-</div>
-
-<div class="feed-card card mb-4">
-      <img src="https://images.unsplash.com/photo-1699883905775-80a35ce65ace?auto=format&fit=crop&q=80&w=985" class="feed-img" alt="Post Image">
-      <div class="card-body">
-        <h5 class="card-title">John Doe</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-      </div>
-    </div>
-
-   <div class="feed-card card mb-4">
-      <img src="https://images.unsplash.com/photo-1699883905775-80a35ce65ace?auto=format&fit=crop&q=80&w=985" class="feed-img" alt="Post Image">
-      <div class="card-body">
-        <h5 class="card-title">John Doe</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-      </div>
-    </div>
-</section>
+    </section>
 </main>
     <script type="module" src="/src/main.js"></script>
 

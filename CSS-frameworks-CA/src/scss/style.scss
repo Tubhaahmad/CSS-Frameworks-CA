@@ -1,9 +1,15 @@
 
-@import "./variables";
+
 @import "bootstrap/scss/bootstrap";
 @import "bootstrap-icons/font/bootstrap-icons";
-@import "./layout";
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+
 @import "./mixins";
+@import "./layout";
+@import "./variables";
 @import "feed";
 
 
