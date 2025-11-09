@@ -18,6 +18,55 @@ $break-md: 768px;
 }
 
 
+.feed-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+
+  .options-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0; // remove extra spacing
+
+    label {
+      color: $pink;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+      font-size: 0.95rem;
+    }
+
+    .form-select {
+      @extend %input-base;
+      @include rounded-input(1rem, 0.4rem, 1rem);
+      max-width: 350px;
+    }
+  }
+
+  .search-bar {
+    width: 100%;
+    max-width: 350px;
+    margin-top: 0.5rem;
+
+    input {
+      @extend %input-base;
+      @include rounded-input(1rem, 0.4rem, 1rem);
+    }
+  }
+
+  @include mobile {
+    gap: 0.6rem;
+
+    .form-select,
+    .search-bar input {
+      max-width: 280px;
+    }
+  }
+}
+
 .feed-grid {
   display: flex;
   flex-direction: column;
