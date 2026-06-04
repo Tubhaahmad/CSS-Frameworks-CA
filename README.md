@@ -78,3 +78,6 @@ If you'd like to contribute, please fork the repository and open a pull request.
 
 Built as part of the CSS Frameworks course assignment at Noroff School of Technology and Digital Media.
 
+## Authors
+- Tubha Ahmad(@Tubhaahmad)
+
