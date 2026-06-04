@@ -1,6 +1,9 @@
+
 # CSS Frameworks CA
 
 An Instagram-inspired social media app built as a course assignment at Noroff, focusing on CSS frameworks, responsive design and SCSS architecture.
+
+<img width="2895" height="1471" alt="css-frameworks" src="https://github.com/user-attachments/assets/3ec429d8-06b4-4dcf-9650-4a5ee042609c" />
 
 ## Description
 
