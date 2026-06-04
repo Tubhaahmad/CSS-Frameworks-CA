@@ -17,6 +17,10 @@ Features:
 * Bottom navigation bar on mobile that becomes a side navigation on desktop
 * Logout button with confirmation prompt
 
+## Live Demo
+
+[View the live site](https://css-framworks-ca.netlify.app)
+
 ## Built With
 
 * [Vite](https://vitejs.dev/)
