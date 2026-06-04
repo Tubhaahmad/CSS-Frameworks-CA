@@ -1,397 +1,435 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Feed</title>
-</head>
-<body>
-    
- <nav class="app-nav">
-  <a href="../feed/index.html" class="nav-item active">
-    <i class="bi bi-house"></i>
-    <span>Home</span>
-  </a>
-  <a href="#" class="nav-item">
-    <i class="bi bi-search"></i>
-    <span>Search</span>
-  </a>
-  <a href="#" class="nav-item">
-    <i class="bi bi-heart"></i>
-    <span>Likes</span>
-  </a>
-  <a href="#" class="nav-item">
-    <i class="bi bi-bell"></i>
-    <span>Notifications</span>
-  </a>
-  <a href="../profile/index.html" class="nav-item">
-    <i class="bi bi-person"></i>
-    <span>Profile</span>
-  </a>
-</nav>
+  </head>
+  <body>
+    <nav class="app-nav">
+      <a href="../feed/index.html" class="nav-item active">
+        <i class="bi bi-house"></i>
+        <span>Home</span>
+      </a>
+      <a href="#" class="nav-item">
+        <i class="bi bi-search"></i>
+        <span>Search</span>
+      </a>
+      <a href="#" class="nav-item">
+        <i class="bi bi-heart"></i>
+        <span>Likes</span>
+      </a>
+      <a href="#" class="nav-item">
+        <i class="bi bi-bell"></i>
+        <span>Notifications</span>
+      </a>
+      <a href="../profile/index.html" class="nav-item">
+        <i class="bi bi-person"></i>
+        <span>Profile</span>
+      </a>
+    </nav>
 
-<main class="container feed-page mb-3 position-relative">
-  <button class="btn logout-btn">Log out</button>
+    <main class="container feed-page mb-3 position-relative">
+      <button class="btn logout-btn">Log out</button>
 
-  <h1 class="text-center mb-3">Feed</h1>
+      <h1 class="text-center mb-3">Feed</h1>
 
-  <section class="feed-controls mb-4">
-    <div class="options-bar mb-3">
-      <label for="select" class="form-label">Sort posts by:</label>
-      <select class="form-select" id="select">
-        <option>Sort by</option>
-        <option>Newest Posts</option>
-        <option>Oldest Posts</option>
-      </select>
-    </div>
-
-    <div class="search-bar">
-      <input type="text" class="form-control" placeholder="Search posts...">
-    </div>
-  </section>
-
- <!-- CREATE POST SECTION -->
-<section class="create-post">
-  <h2 class="create-post-title text-center mb-4">Create a new post</h2>
-
-  <form class="create-post-form w-100">
-    <div class="mb-3">
-      <label for="postCaption" class="form-label">Caption</label>
-      <input
-        type="text"
-        id="postCaption"
-        class="form-control"
-        placeholder="What's on your mind?"
-        required
-      >
-    </div>
-
-    <div class="mb-3">
-      <label for="postImage" class="form-label">Image URL</label>
-      <input
-        type="url"
-        id="postImage"
-        class="form-control"
-        placeholder="Paste image link here..."
-        required
-      >
-    </div>
-
-    <button type="submit" class="btn create-post-btn w-100 w-md-auto">
-      Post
-    </button>
-  </form>
-</section>
-
-  
-   <hr class="divider">
-
-   <section class="feed-grid">
-  <div class="feed-card card mb-4">
-    <div class="post-header">
-      <div class="user-info">
-      <span class="username">Alice Moore</span>
-      <span class="post-time">• 1h</span>
-</div>
-      <i class="bi bi-three-dots-vertical"></i>
-    </div>
-    
-      <img src="https://images.unsplash.com/photo-1699883905775-80a35ce65ace?auto=format&fit=crop&q=80&w=985" class="feed-img" alt="Post Image">
-
-
-      <div class="post-actions">
-        <div class="left-icons">
-      <i class="bi bi-heart"></i>
-      <i class="bi bi-chat"></i>
-      <i class="bi bi-send"></i>
-      </div>
-      <i class="bi bi-bookmark right-icon"></i>
-
-    </div>
-
-      <div class="card-body">
-        <div class="card-text">
-        <span class="card-title">Alice Moore</span> Pretty Flowers!
+      <section class="feed-controls mb-4">
+        <div class="options-bar mb-3">
+          <label for="select" class="form-label">Sort posts by:</label>
+          <select class="form-select" id="select">
+            <option>Sort by</option>
+            <option>Newest Posts</option>
+            <option>Oldest Posts</option>
+          </select>
         </div>
-        <p class="card-time-update"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-      </div>
-    </div>
 
-     <div class="feed-card card mb-4">
-    <div class="post-header">
-      <div class="user-info">
-      <span class="username">Alice Moore</span>
-      <span class="post-time">• 1h</span>
-</div>
-      <i class="bi bi-three-dots-vertical"></i>
-    </div>
-    
-      <img src="https://images.unsplash.com/photo-1699883905775-80a35ce65ace?auto=format&fit=crop&q=80&w=985" class="feed-img" alt="Post Image">
-
-
-      <div class="post-actions">
-        <div class="left-icons">
-      <i class="bi bi-heart"></i>
-      <i class="bi bi-chat"></i>
-      <i class="bi bi-send"></i>
-      </div>
-      <i class="bi bi-bookmark right-icon"></i>
-
-    </div>
-
-      <div class="card-body">
-        <div class="card-text">
-        <span class="card-title">Alice Moore</span> Pretty Flowers!
+        <div class="search-bar">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Search posts..."
+          />
         </div>
-        <p class="card-time-update"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-      </div>
-    </div>
+      </section>
 
-     <div class="feed-card card mb-4">
-    <div class="post-header">
-      <div class="user-info">
-      <span class="username">Alice Moore</span>
-      <span class="post-time">• 1h</span>
-</div>
-      <i class="bi bi-three-dots-vertical"></i>
-    </div>
-    
-      <img src="https://images.unsplash.com/photo-1699883905775-80a35ce65ace?auto=format&fit=crop&q=80&w=985" class="feed-img" alt="Post Image">
+      <!-- CREATE POST SECTION -->
+      <section class="create-post">
+        <h2 class="create-post-title text-center mb-4">Create a new post</h2>
 
+        <form class="create-post-form w-100">
+          <div class="mb-3">
+            <label for="postCaption" class="form-label">Caption</label>
+            <input
+              type="text"
+              id="postCaption"
+              class="form-control"
+              placeholder="What's on your mind?"
+              required
+            />
+          </div>
 
-      <div class="post-actions">
-        <div class="left-icons">
-      <i class="bi bi-heart"></i>
-      <i class="bi bi-chat"></i>
-      <i class="bi bi-send"></i>
-      </div>
-      <i class="bi bi-bookmark right-icon"></i>
+          <div class="mb-3">
+            <label for="postImage" class="form-label">Image URL</label>
+            <input
+              type="url"
+              id="postImage"
+              class="form-control"
+              placeholder="Paste image link here..."
+              required
+            />
+          </div>
 
-    </div>
+          <button type="submit" class="btn create-post-btn w-100 w-md-auto">
+            Post
+          </button>
+        </form>
+      </section>
 
-      <div class="card-body">
-        <div class="card-text">
-        <span class="card-title">Alice Moore</span> Pretty Flowers!
+      <hr class="divider" />
+
+      <section class="feed-grid">
+        <div class="feed-card card mb-4">
+          <div class="post-header">
+            <div class="user-info">
+              <span class="username">alicemoore</span>
+              <span class="post-time">• 1h</span>
+            </div>
+            <i class="bi bi-three-dots-vertical"></i>
+          </div>
+
+          <img
+            src="https://i.pinimg.com/736x/ba/79/5c/ba795cf1e41c6dd2c01ddebfe83a40f3.jpg"
+            class="feed-img"
+            alt="Post Image"
+          />
+
+          <div class="post-actions">
+            <div class="left-icons">
+              <i class="bi bi-heart"></i>
+              <i class="bi bi-chat"></i>
+              <i class="bi bi-send"></i>
+            </div>
+            <i class="bi bi-bookmark right-icon"></i>
+          </div>
+
+          <div class="card-body">
+            <div class="card-text">
+              <span class="card-title">alicemoore</span> @ the seaside
+            </div>
+            <p class="card-time-update">
+              <small class="text-body-secondary">Last updated 3 mins ago</small>
+            </p>
+          </div>
         </div>
-        <p class="card-time-update"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-      </div>
-    </div>
 
-     <div class="feed-card card mb-4">
-    <div class="post-header">
-      <div class="user-info">
-      <span class="username">Alice Moore</span>
-      <span class="post-time">• 1h</span>
-</div>
-      <i class="bi bi-three-dots-vertical"></i>
-    </div>
-    
-      <img src="https://images.unsplash.com/photo-1699883905775-80a35ce65ace?auto=format&fit=crop&q=80&w=985" class="feed-img" alt="Post Image">
+        <div class="feed-card card mb-4">
+          <div class="post-header">
+            <div class="user-info">
+              <span class="username">EJ_jc</span>
+              <span class="post-time">• 1h</span>
+            </div>
+            <i class="bi bi-three-dots-vertical"></i>
+          </div>
 
+          <img
+            src="https://i.pinimg.com/1200x/fd/77/b4/fd77b426eb6577c0973b25e6f837bce1.jpg"
+            class="feed-img"
+            alt="Post Image"
+          />
 
-      <div class="post-actions">
-        <div class="left-icons">
-      <i class="bi bi-heart"></i>
-      <i class="bi bi-chat"></i>
-      <i class="bi bi-send"></i>
-      </div>
-      <i class="bi bi-bookmark right-icon"></i>
+          <div class="post-actions">
+            <div class="left-icons">
+              <i class="bi bi-heart"></i>
+              <i class="bi bi-chat"></i>
+              <i class="bi bi-send"></i>
+            </div>
+            <i class="bi bi-bookmark right-icon"></i>
+          </div>
 
-    </div>
-
-      <div class="card-body">
-        <div class="card-text">
-        <span class="card-title">Alice Moore</span> Pretty Flowers!
+          <div class="card-body">
+            <div class="card-text">
+              <span class="card-title">ej_jc</span> live love music
+            </div>
+            <p class="card-time-update">
+              <small class="text-body-secondary">Last updated 3 mins ago</small>
+            </p>
+          </div>
         </div>
-        <p class="card-time-update"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-      </div>
-    </div>
 
-     <div class="feed-card card mb-4">
-    <div class="post-header">
-      <div class="user-info">
-      <span class="username">Alice Moore</span>
-      <span class="post-time">• 1h</span>
-</div>
-      <i class="bi bi-three-dots-vertical"></i>
-    </div>
-    
-      <img src="https://images.unsplash.com/photo-1699883905775-80a35ce65ace?auto=format&fit=crop&q=80&w=985" class="feed-img" alt="Post Image">
+        <div class="feed-card card mb-4">
+          <div class="post-header">
+            <div class="user-info">
+              <span class="username">harriottt</span>
+              <span class="post-time">• 1h</span>
+            </div>
+            <i class="bi bi-three-dots-vertical"></i>
+          </div>
 
+          <img
+            src="https://i.pinimg.com/736x/79/38/2b/79382b64430089cd132cc2217f1861bf.jpg"
+            class="feed-img"
+            alt="Post Image"
+          />
 
-      <div class="post-actions">
-        <div class="left-icons">
-      <i class="bi bi-heart"></i>
-      <i class="bi bi-chat"></i>
-      <i class="bi bi-send"></i>
-      </div>
-      <i class="bi bi-bookmark right-icon"></i>
+          <div class="post-actions">
+            <div class="left-icons">
+              <i class="bi bi-heart"></i>
+              <i class="bi bi-chat"></i>
+              <i class="bi bi-send"></i>
+            </div>
+            <i class="bi bi-bookmark right-icon"></i>
+          </div>
 
-    </div>
-
-      <div class="card-body">
-        <div class="card-text">
-        <span class="card-title">Alice Moore</span> Pretty Flowers!
+          <div class="card-body">
+            <div class="card-text">
+              <span class="card-title">harriottt</span> outift of the day
+            </div>
+            <p class="card-time-update">
+              <small class="text-body-secondary">Last updated 3 mins ago</small>
+            </p>
+          </div>
         </div>
-        <p class="card-time-update"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-      </div>
-    </div>
 
-     <div class="feed-card card mb-4">
-    <div class="post-header">
-      <div class="user-info">
-      <span class="username">Alice Moore</span>
-      <span class="post-time">• 1h</span>
-</div>
-      <i class="bi bi-three-dots-vertical"></i>
-    </div>
-    
-      <img src="https://images.unsplash.com/photo-1699883905775-80a35ce65ace?auto=format&fit=crop&q=80&w=985" class="feed-img" alt="Post Image">
+        <div class="feed-card card mb-4">
+          <div class="post-header">
+            <div class="user-info">
+              <span class="username">tessofficial</span>
+              <span class="post-time">• 1h</span>
+            </div>
+            <i class="bi bi-three-dots-vertical"></i>
+          </div>
 
+          <img
+            src="https://i.pinimg.com/1200x/eb/b7/fb/ebb7fbe2a623e6f0731c23269519008a.jpg"
+            class="feed-img"
+            alt="Post Image"
+          />
 
-      <div class="post-actions">
-        <div class="left-icons">
-      <i class="bi bi-heart"></i>
-      <i class="bi bi-chat"></i>
-      <i class="bi bi-send"></i>
-      </div>
-      <i class="bi bi-bookmark right-icon"></i>
+          <div class="post-actions">
+            <div class="left-icons">
+              <i class="bi bi-heart"></i>
+              <i class="bi bi-chat"></i>
+              <i class="bi bi-send"></i>
+            </div>
+            <i class="bi bi-bookmark right-icon"></i>
+          </div>
 
-    </div>
-
-      <div class="card-body">
-        <div class="card-text">
-        <span class="card-title">Alice Moore</span> Pretty Flowers!
+          <div class="card-body">
+            <div class="card-text">
+              <span class="card-title">tessofficial</span> finally back!
+            </div>
+            <p class="card-time-update">
+              <small class="text-body-secondary">Last updated 3 mins ago</small>
+            </p>
+          </div>
         </div>
-        <p class="card-time-update"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-      </div>
-    </div>
 
-     <div class="feed-card card mb-4">
-    <div class="post-header">
-      <div class="user-info">
-      <span class="username">Alice Moore</span>
-      <span class="post-time">• 1h</span>
-</div>
-      <i class="bi bi-three-dots-vertical"></i>
-    </div>
-    
-      <img src="https://images.unsplash.com/photo-1699883905775-80a35ce65ace?auto=format&fit=crop&q=80&w=985" class="feed-img" alt="Post Image">
+        <div class="feed-card card mb-4">
+          <div class="post-header">
+            <div class="user-info">
+              <span class="username">ninajackson</span>
+              <span class="post-time">• 1h</span>
+            </div>
+            <i class="bi bi-three-dots-vertical"></i>
+          </div>
 
+          <img
+            src="https://i.pinimg.com/736x/a7/f7/4d/a7f74d9b3eed24928a2dffc52442a58f.jpg"
+            class="feed-img"
+            alt="Post Image"
+          />
 
-      <div class="post-actions">
-        <div class="left-icons">
-      <i class="bi bi-heart"></i>
-      <i class="bi bi-chat"></i>
-      <i class="bi bi-send"></i>
-      </div>
-      <i class="bi bi-bookmark right-icon"></i>
+          <div class="post-actions">
+            <div class="left-icons">
+              <i class="bi bi-heart"></i>
+              <i class="bi bi-chat"></i>
+              <i class="bi bi-send"></i>
+            </div>
+            <i class="bi bi-bookmark right-icon"></i>
+          </div>
 
-    </div>
-
-      <div class="card-body">
-        <div class="card-text">
-        <span class="card-title">Alice Moore</span> Pretty Flowers!
+          <div class="card-body">
+            <div class="card-text">
+              <span class="card-title">ninajackson</span> recent reads.
+            </div>
+            <p class="card-time-update">
+              <small class="text-body-secondary">Last updated 3 mins ago</small>
+            </p>
+          </div>
         </div>
-        <p class="card-time-update"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-      </div>
-    </div>
 
-     <div class="feed-card card mb-4">
-    <div class="post-header">
-      <div class="user-info">
-      <span class="username">Alice Moore</span>
-      <span class="post-time">• 1h</span>
-</div>
-      <i class="bi bi-three-dots-vertical"></i>
-    </div>
-    
-      <img src="https://images.unsplash.com/photo-1699883905775-80a35ce65ace?auto=format&fit=crop&q=80&w=985" class="feed-img" alt="Post Image">
+        <div class="feed-card card mb-4">
+          <div class="post-header">
+            <div class="user-info">
+              <span class="username">maryyy</span>
+              <span class="post-time">• 1h</span>
+            </div>
+            <i class="bi bi-three-dots-vertical"></i>
+          </div>
 
+          <img
+            src="https://i.pinimg.com/736x/e4/85/44/e48544606fb1f5d6120c67a9b2a93df1.jpg"
+            class="feed-img"
+            alt="Post Image"
+          />
 
-      <div class="post-actions">
-        <div class="left-icons">
-      <i class="bi bi-heart"></i>
-      <i class="bi bi-chat"></i>
-      <i class="bi bi-send"></i>
-      </div>
-      <i class="bi bi-bookmark right-icon"></i>
+          <div class="post-actions">
+            <div class="left-icons">
+              <i class="bi bi-heart"></i>
+              <i class="bi bi-chat"></i>
+              <i class="bi bi-send"></i>
+            </div>
+            <i class="bi bi-bookmark right-icon"></i>
+          </div>
 
-    </div>
-
-      <div class="card-body">
-        <div class="card-text">
-        <span class="card-title">Alice Moore</span> Pretty Flowers!
+          <div class="card-body">
+            <div class="card-text">
+              <span class="card-title">maryyy</span> eat, work, repeat
+            </div>
+            <p class="card-time-update">
+              <small class="text-body-secondary">Last updated 3 mins ago</small>
+            </p>
+          </div>
         </div>
-        <p class="card-time-update"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-      </div>
-    </div>
 
-     <div class="feed-card card mb-4">
-    <div class="post-header">
-      <div class="user-info">
-      <span class="username">Alice Moore</span>
-      <span class="post-time">• 1h</span>
-</div>
-      <i class="bi bi-three-dots-vertical"></i>
-    </div>
-    
-      <img src="https://images.unsplash.com/photo-1699883905775-80a35ce65ace?auto=format&fit=crop&q=80&w=985" class="feed-img" alt="Post Image">
+        <div class="feed-card card mb-4">
+          <div class="post-header">
+            <div class="user-info">
+              <span class="username">sarah</span>
+              <span class="post-time">• 1h</span>
+            </div>
+            <i class="bi bi-three-dots-vertical"></i>
+          </div>
 
+          <img
+            src="https://i.pinimg.com/736x/30/8e/8a/308e8a85a04008ef5250c11273874257.jpg"
+            class="feed-img"
+            alt="Post Image"
+          />
 
-      <div class="post-actions">
-        <div class="left-icons">
-      <i class="bi bi-heart"></i>
-      <i class="bi bi-chat"></i>
-      <i class="bi bi-send"></i>
-      </div>
-      <i class="bi bi-bookmark right-icon"></i>
+          <div class="post-actions">
+            <div class="left-icons">
+              <i class="bi bi-heart"></i>
+              <i class="bi bi-chat"></i>
+              <i class="bi bi-send"></i>
+            </div>
+            <i class="bi bi-bookmark right-icon"></i>
+          </div>
 
-    </div>
-
-      <div class="card-body">
-        <div class="card-text">
-        <span class="card-title">Alice Moore</span> Pretty Flowers!
+          <div class="card-body">
+            <div class="card-text">
+              <span class="card-title">sarah</span> my three fav thingss
+            </div>
+            <p class="card-time-update">
+              <small class="text-body-secondary">Last updated 3 mins ago</small>
+            </p>
+          </div>
         </div>
-        <p class="card-time-update"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-      </div>
-    </div>
 
-     <div class="feed-card card mb-4">
-    <div class="post-header">
-      <div class="user-info">
-      <span class="username">Alice Moore</span>
-      <span class="post-time">• 1h</span>
-</div>
-      <i class="bi bi-three-dots-vertical"></i>
-    </div>
-    
-      <img src="https://images.unsplash.com/photo-1699883905775-80a35ce65ace?auto=format&fit=crop&q=80&w=985" class="feed-img" alt="Post Image">
+        <div class="feed-card card mb-4">
+          <div class="post-header">
+            <div class="user-info">
+              <span class="username">isabelle</span>
+              <span class="post-time">• 1h</span>
+            </div>
+            <i class="bi bi-three-dots-vertical"></i>
+          </div>
 
+          <img
+            src="https://i.pinimg.com/736x/0d/76/b9/0d76b9e0a58435ef8af7b97072899708.jpg"
+            class="feed-img"
+            alt="Post Image"
+          />
 
-      <div class="post-actions">
-        <div class="left-icons">
-      <i class="bi bi-heart"></i>
-      <i class="bi bi-chat"></i>
-      <i class="bi bi-send"></i>
-      </div>
-      <i class="bi bi-bookmark right-icon"></i>
+          <div class="post-actions">
+            <div class="left-icons">
+              <i class="bi bi-heart"></i>
+              <i class="bi bi-chat"></i>
+              <i class="bi bi-send"></i>
+            </div>
+            <i class="bi bi-bookmark right-icon"></i>
+          </div>
 
-    </div>
-
-      <div class="card-body">
-        <div class="card-text">
-        <span class="card-title">Alice Moore</span> Pretty Flowers!
+          <div class="card-body">
+            <div class="card-text">
+              <span class="card-title">isabelle</span> cutest breakfast
+            </div>
+            <p class="card-time-update">
+              <small class="text-body-secondary">Last updated 3 mins ago</small>
+            </p>
+          </div>
         </div>
-        <p class="card-time-update"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-      </div>
-    </div>
 
+        <div class="feed-card card mb-4">
+          <div class="post-header">
+            <div class="user-info">
+              <span class="username">maggielee</span>
+              <span class="post-time">• 1h</span>
+            </div>
+            <i class="bi bi-three-dots-vertical"></i>
+          </div>
 
-    </section>
-</main>
+          <img
+            src="https://i.pinimg.com/1200x/c0/a4/cc/c0a4ccb3750fbb39d10aa35c5a141bdf.jpg"
+            class="feed-img"
+            alt="Post Image"
+          />
+
+          <div class="post-actions">
+            <div class="left-icons">
+              <i class="bi bi-heart"></i>
+              <i class="bi bi-chat"></i>
+              <i class="bi bi-send"></i>
+            </div>
+            <i class="bi bi-bookmark right-icon"></i>
+          </div>
+
+          <div class="card-body">
+            <div class="card-text">
+              <span class="card-title">maggielee</span> kittyyy
+            </div>
+            <p class="card-time-update">
+              <small class="text-body-secondary">Last updated 3 mins ago</small>
+            </p>
+          </div>
+        </div>
+
+        <div class="feed-card card mb-4">
+          <div class="post-header">
+            <div class="user-info">
+              <span class="username">hernameis.ella</span>
+              <span class="post-time">• 1h</span>
+            </div>
+            <i class="bi bi-three-dots-vertical"></i>
+          </div>
+
+          <img
+            src="https://i.pinimg.com/736x/7b/bb/e3/7bbbe39ef33108c8ad6bb07899640b17.jpg"
+            class="feed-img"
+            alt="Post Image"
+          />
+
+          <div class="post-actions">
+            <div class="left-icons">
+              <i class="bi bi-heart"></i>
+              <i class="bi bi-chat"></i>
+              <i class="bi bi-send"></i>
+            </div>
+            <i class="bi bi-bookmark right-icon"></i>
+          </div>
+
+          <div class="card-body">
+            <div class="card-text">
+              <span class="card-title">hernameis.ella</span> favorite corner
+            </div>
+            <p class="card-time-update">
+              <small class="text-body-secondary">Last updated 3 mins ago</small>
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
     <script type="module" src="/src/main.js"></script>
-
-    
-</body>
+  </body>
 </html>
