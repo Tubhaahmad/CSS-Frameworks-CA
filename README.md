@@ -19,7 +19,7 @@ Features:
 
 ## Live Demo
 
-[View the live site](https://css-framworks-ca.netlify.app)
+- [Production deploy](https://artevia-sp2.netlify.app/index.html)
 
 ## Built With
 
