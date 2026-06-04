@@ -1,7 +1,7 @@
-$pink: #be046d;
-$light-pink: #fff4fa;
-$gray: #444;
-$white: #fff;
+$pink: #c4a882; // was #be046d
+$light-pink: #f5f0e8; // was #fff4fa
+$gray: #6b5a4e; // was #444
+$white: #fffdf9; // was #fff
 $radius: 1rem;
 $break-md: 768px;
 
@@ -34,7 +34,6 @@ $break-md: 768px;
   }
 }
 
-
 //Inputs//
 // Rounded input field
 @mixin rounded-input($radius: 2rem, $padding-y: 0.6rem, $padding-x: 1rem) {
@@ -62,8 +61,3 @@ $break-md: 768px;
     color: lighten($gray, 20%);
   }
 }
-
-
-
-
-

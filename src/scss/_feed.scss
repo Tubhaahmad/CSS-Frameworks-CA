@@ -1,13 +1,11 @@
-$pink: #be046d;
-$light-pink: #fff4fa;
-$gray: #444;
-$white: #fff;
-$shadow: 0 4px 12px rgba(190, 4, 109, 0.15);
-$shadow-hover: 0 6px 18px rgba(190, 4, 109, 0.25);
+$pink: #c4a882;
+$light-pink: #f5f0e8;
+$gray: #6b5a4e;
+$white: #fffdf9;
+$shadow: 0 4px 12px rgba(160, 133, 106, 0.15);
+$shadow-hover: 0 6px 18px rgba(160, 133, 106, 0.25);
 $radius: 1rem;
 $break-md: 768px;
-
-
 
 .feed-page {
   text-align: center;
@@ -16,7 +14,6 @@ $break-md: 768px;
     font-weight: 700;
   }
 }
-
 
 .feed-controls {
   display: flex;
@@ -102,114 +99,110 @@ $break-md: 768px;
       border: none;
     }
 
-// Tablet screens
-  @include tablet {
-    max-width: 350px;
+    // Tablet screens
+    @include tablet {
+      max-width: 350px;
 
-    .feed-img {
-      height: 350px;
-    }
-  }
-
-  // Mobile screens
-  @include mobile {
-    max-width: 300px;
-
-    .feed-img {
-      height: 250px;
-    }
-  }
-}
-
-    .post-actions {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0.8rem 1rem 0.4rem;
-      color: $pink;
-      font-size: 1.3rem;
-      font-weight: 600;
-      user-select: none;
-
-      .left-icons {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-      }
-
-      i {
-        cursor: pointer;
-        transition: all 0.2s ease;
-
-        &:hover {
-          color: darken($pink, 10%);
-          transform: scale(1.1);
-        }
-
-        &:last-child {
-          margin-left: auto;
-        }
+      .feed-img {
+        height: 350px;
       }
     }
 
-    .card-body {
-      text-align: left;
-      padding: 1rem;
+    // Mobile screens
+    @include mobile {
+      max-width: 300px;
 
-      .card-text {
-        display: flex;
-        align-items: baseline;
-        flex-wrap: wrap;
-        gap: 0.3rem;
-        margin-bottom: 0.5rem;
-        font-size: 1rem;
-        color: $gray;
-
-        .card-title {
-          color: $pink;
-          font-weight: 600;
-          margin: 0;
-          display: inline;
-        }
-      }
-
-      .text-body-secondary {
-        font-size: 0.75rem;
-        color: $gray;
+      .feed-img {
+        height: 250px;
       }
     }
   }
 
-
-.post-header {
+  .post-actions {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.4rem 1rem;
-    font-size: 1rem;
+    padding: 0.8rem 1rem 0.4rem;
+    color: $pink;
+    font-size: 1.3rem;
     font-weight: 600;
+    user-select: none;
 
-    .user-info {
-        display: flex;
-        align-items: center;
-        gap: 0.4rem;
+    .left-icons {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
     }
 
-    .username {
-        
+    i {
+      cursor: pointer;
+      transition: all 0.2s ease;
+
+      &:hover {
+        color: darken($pink, 10%);
+        transform: scale(1.1);
+      }
+
+      &:last-child {
+        margin-left: auto;
+      }
+    }
+  }
+
+  .card-body {
+    text-align: left;
+    padding: 1rem;
+
+    .card-text {
+      display: flex;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.3rem;
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+      color: $gray;
+
+      .card-title {
         color: $pink;
         font-weight: 600;
-        font-size: large;
-    }   
+        margin: 0;
+        display: inline;
+      }
+    }
+
+    .text-body-secondary {
+      font-size: 0.75rem;
+      color: $gray;
+    }
+  }
+}
+
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.4rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+
+  .user-info {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .username {
+    color: $pink;
+    font-weight: 600;
+    font-size: large;
+  }
 }
 
 .post-time {
-    display: flex;
-    color: $pink;
-    font-size: 0.875rem;
-    padding-bottom: 0.2rem;
-    
-    
+  display: flex;
+  color: $pink;
+  font-size: 0.875rem;
+  padding-bottom: 0.2rem;
 }
 
 .search-bar {
@@ -219,32 +212,31 @@ $break-md: 768px;
   max-width: 400px;
 
   label {
-        color: $pink;
-        font-weight: 600;
-        margin-bottom: 0.5rem;
-    }
+    color: $pink;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
 }
 
 .options-bar {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
 
-    label {
-        color: $pink;
-        font-weight: 600;
-        margin-bottom: 0.5rem;
-    }
+  label {
+    color: $pink;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
 }
 
 .form-select {
-    @extend %input-base;
-    @include rounded-input(1rem, 0.5rem, 1rem);
-    max-width: 400px;
-    cursor: pointer;
+  @extend %input-base;
+  @include rounded-input(1rem, 0.5rem, 1rem);
+  max-width: 400px;
+  cursor: pointer;
 }
-
 
 .create-post {
   background-color: rgba($light-pink, 0.8);

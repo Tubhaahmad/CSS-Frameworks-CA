@@ -1,85 +1,79 @@
 body {
-  background-color: #ffe1f4;
+  background-color: $sand-lighter; // was #ffe1f4
 }
 
 h1 {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #be046d;
+  color: $sand-main; // was #be046d
   text-align: center;
   margin-bottom: 1.5rem;
 
   @include media-breakpoint-up(md) {
     font-size: 1.8rem;
-    
   }
 
   @include media-breakpoint-up(lg) {
     font-size: 2.2rem;
-    
   }
 }
 
 .auth-card {
-    background-color: #fff;
-    border-radius: 1.2rem;
-    box-shadow: 0 6px 16px rgba(190, 4, 109, 0.15);
-    width: 100%;
-    padding: 1.5rem;
-    margin: 0 auto;
-    transition: all 0.3s ease;
+  background-color: $white;
+  border-radius: 1.2rem;
+  box-shadow: 0 6px 16px rgba($terra-main, 0.15); // was rgba(190, 4, 109, ...)
+  width: 100%;
+  padding: 1.5rem;
+  margin: 0 auto;
+  transition: all 0.3s ease;
 
-    &:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 8px 22px rgba(190, 4, 109, 0.25);
-    }
-    
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 22px rgba($terra-main, 0.25);
+  }
 }
 
 label {
-    color: #8f0152;
-    font-weight: 600;
+  color: $ink; // was #8f0152
+  font-weight: 600;
 }
 
 .form-control {
-    border: 1px solid #ddd;
-    border-radius: 0.5rem;
-    padding: 0.75rem 1rem;
-    font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
 
-    &:focus {
-        border-color: #be046d;
-        box-shadow: 0 0 0 0.25rem rgba(190, 4, 109, 0.25);
-    }
+  &:focus {
+    border-color: $sand-main;
+    box-shadow: 0 0 0 0.25rem rgba($sand-main, 0.25);
+  }
 }
 
 .form-check-input:checked {
-    background-color: #be046d;
-    border-color: #be046d;
-  }
+  background-color: $sand-main;
+  border-color: $sand-main;
+}
 
 .btn {
-    background-color: #be046d;
-    border: none;
-    border-radius: 0.5rem;
-    padding: 0.75rem 1.5rem;
-    
-    font-weight: 600;
- 
-    transition: background-color 0.3s ease;
+  background-color: $sand-main;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
 
-    &:hover {
-        background-color: #a0035a;
-    }
-    
-    &:focus {
-        box-shadow: 0 0 0 0.25rem rgba(190, 4, 109, 0.25);
-    }
+  &:hover {
+    background-color: $terra-main; // was #a0035a
   }
 
+  &:focus {
+    box-shadow: 0 0 0 0.25rem rgba($sand-main, 0.25);
+  }
+}
 
- .auth-card.register {
-  background-color: #fff4fa; 
+.auth-card.register {
+  background-color: $sand-lighter; // was #fff4fa
 }
 
 .app-nav {
@@ -89,19 +83,18 @@ label {
   transform: translateX(-50%);
   width: 100%;
   max-width: 480px;
-  background-color: #fff4fa;
+  background-color: $white;
   border-radius: 2rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
   padding: 0.6rem 0.4rem;
   z-index: 1000;
-  width: 100%;
 
   .nav-item {
-    color: #444;
+    color: $gray-text;
     text-decoration: none;
     display: flex;
     flex-direction: column;
@@ -110,25 +103,22 @@ label {
     font-size: 0.8rem;
     transition: color 0.2s ease;
 
-
     i {
       font-size: 1.4rem;
     }
 
     &.active,
     &:hover {
-      color: #be046d;
+      color: $sand-main;
       i {
-        background-color: rgba(190, 4, 109, 0.1);
+        background-color: rgba($sand-main, 0.1);
         width: 2.2rem;
         height: 2.2rem;
         align-items: center;
         justify-content: center;
         border-radius: 50%;
         display: flex;
-        transform: scale(1.1)
-        
-        
+        transform: scale(1.1);
       }
     }
   }
@@ -145,7 +135,7 @@ label {
     flex-direction: column;
     align-items: center;
     padding: 2rem 0;
-    box-shadow: 3px 0 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 3px 0 12px rgba(0, 0, 0, 0.1);
 
     .nav-item-wrapper {
       display: flex;
@@ -155,7 +145,6 @@ label {
       height: 60%;
       width: 100%;
       padding-left: 1rem;
-      
     }
 
     .nav-item {
@@ -170,28 +159,24 @@ label {
   }
 }
 
-//PROFILE PAGE//
+// PROFILE PAGE //
 .profile-page,
 .profile-info {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
   border-radius: 1.5rem;
   padding: 1.5rem;
   padding-left: 2.4rem;
   margin: 2rem;
   max-width: 100%;
   gap: 1.2rem;
-  
 
-  
   @include media-breakpoint-up(lg) {
     margin-left: 160px;
     max-width: calc(100% - 160px);
-    
-    
   }
 }
 
@@ -200,7 +185,7 @@ label {
   height: 55px;
   object-fit: cover;
   border-radius: 50%;
-  border: 2px solid #be046d;
+  border: 2px solid $sand-main; // was #be046d
   margin-bottom: 1rem;
 
   @include media-breakpoint-up(sm) {
@@ -223,7 +208,6 @@ label {
   flex-direction: column;
   align-items: center;
   padding-right: 1rem;
- 
 
   @include media-breakpoint-up(md) {
     align-items: flex-start;
@@ -231,7 +215,7 @@ label {
 }
 
 .username {
-  color: #be046d;
+  color: $ink; // was #be046d
   font-size: 1rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
@@ -245,14 +229,11 @@ label {
   }
 }
 
-
 .followers {
-  color: #444;
+  color: $gray-text;
   font-size: 0.9rem;
   margin-bottom: 0.5rem;
   text-align: center;
-
-
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -270,50 +251,47 @@ label {
 }
 
 .bio {
-    color: #444;
+  color: $gray-text;
   font-size: 0.9rem;
 }
 
-
 .follow-btn {
-  background-color: #be046d;
+  background-color: $sand-main;
   border: none;
   border-radius: 4rem;
   padding: 0.5rem 1.7rem;
   font-weight: 600;
-  color: #fff;
+  color: $white;
   transition: background-color 0.3s ease;
 
   &:hover {
-    background-color: #a0035a;
+    background-color: $terra-main;
   }
 }
 
 .divider {
-    width: 80%;
-    max-width: 100%;
-    height: 2.5px;
-    background-color: #be046d;
-    border: none;
-    border-radius: 2px;
-    margin: 0.2rem auto;
+  width: 80%;
+  max-width: 100%;
+  height: 2.5px;
+  background-color: $sand-light; // was #be046d — softened for beige palette
+  border: none;
+  border-radius: 2px;
+  margin: 0.2rem auto;
 
-    @include media-breakpoint-up(md) {
-      width: 60%;
-    }
-
-    @include media-breakpoint-up(lg) {
-        width: 60%;
-        margin-right: 13rem;
+  @include media-breakpoint-up(md) {
+    width: 60%;
   }
 
+  @include media-breakpoint-up(lg) {
+    width: 60%;
+    margin-right: 13rem;
+  }
 }
 
-//POST GRID PROFILE PAGE//
-
+// POST GRID PROFILE PAGE //
 .profile-header {
-    max-width: 1200px;
-    margin-top: 2rem;
+  max-width: 1200px;
+  margin-top: 2rem;
 }
 
 .post-grid {
@@ -324,29 +302,30 @@ label {
 
   .row {
     margin: 0 auto;
-    max-width: 1000px; 
+    max-width: 1000px;
     justify-content: center;
   }
 
   img {
     width: 100%;
     max-width: 600px;
-    max-height:1000px;
+    max-height: 1000px;
     aspect-ratio: 3 / 4;
     object-fit: cover;
-    box-shadow: 0 4px 12px rgba(190, 4, 109, 0.15);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px rgba($terra-main, 0.15);
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
 
     &:hover {
       transform: scale(1.03);
-      box-shadow: 0 6px 18px rgba(190, 4, 109, 0.25);
+      box-shadow: 0 6px 18px rgba($terra-main, 0.25);
     }
   }
 
-
   @include media-breakpoint-up(lg) {
     position: relative;
-    left: 80px;  
+    left: 80px;
     max-width: calc(100% - 160px);
     display: flex;
     justify-content: center;
@@ -357,5 +336,3 @@ label {
     }
   }
 }
-
-  
