@@ -1,32 +1,26 @@
-import 'bootstrap/dist/js/bootstrap.bundle.min.js'
-import 'bootstrap-icons/font/bootstrap-icons.css'
-import './scss/style.scss'
-
-
-
-(() => {
-  'use strict'
-
-  // Fetch all the forms we want to apply custom Bootstrap validation styles to
-  const forms = document.querySelectorAll('.needs-validation')
-
-  // Loop over them and prevent submission
-  Array.from(forms).forEach(form => {
-    form.addEventListener('submit', event => {
-      if (!form.checkValidity()) {
-        event.preventDefault()
-        event.stopPropagation()
-      }
-
-      form.classList.add('was-validated')
-    }, false)
-  })
-})()
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import "bootstrap-icons/font/bootstrap-icons.css";
+import "./scss/style.scss";
 
 document.addEventListener("DOMContentLoaded", () => {
-  const currentPath = window.location.pathname;
+  // Form validation + redirect
+  const forms = document.querySelectorAll(".needs-validation");
+  forms.forEach((form) => {
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      event.stopPropagation();
 
-  document.querySelectorAll(".nav-item").forEach(link => {
+      if (form.checkValidity()) {
+        window.location.href = "/profile/index.html";
+      }
+
+      form.classList.add("was-validated");
+    });
+  });
+
+  // Active nav link
+  const currentPath = window.location.pathname;
+  document.querySelectorAll(".nav-item").forEach((link) => {
     const href = link.getAttribute("href");
     if (!href || href === "#") return;
 
@@ -39,20 +33,15 @@ document.addEventListener("DOMContentLoaded", () => {
       link.classList.remove("active");
     }
   });
-});
 
-document.addEventListener("DOMContentLoaded", () => {
+  // Logout
   const logoutBtn = document.querySelector(".logout-btn");
   if (logoutBtn) {
     logoutBtn.addEventListener("click", () => {
       const confirmLogout = confirm("Are you sure you want to log out?");
       if (confirmLogout) {
-        
-        window.location.href = "../index.html";
+        window.location.href = "/index.html";
       }
     });
   }
 });
-
-
-
